@@ -1,0 +1,90 @@
+/* navbar */
+.navbar {
+    background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave na navbar */
+}
+
+.btn-outline-success {
+    --bs-btn-color: black;
+    --bs-btn-border-color: black;
+    background-color: white !important;
+    border-radius: 20px; /* Botão com bordas arredondadas */
+    padding: 0.5rem 1.5rem; /* Tamanho de botão maior */
+}
+
+.pacientes {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 3em;
+    text-align: left;
+    padding-left: 2em;  /* Ajuste no padding para centralizar melhor */
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #e0e0e0;  /* Borda mais suave */
+    border-radius: 1rem;  /* Bordas mais arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+    padding: 20px;
+    width: 100%;
+    max-width: 20rem;  /* Limita a largura máxima do card */
+}
+
+.card:hover {
+    transform: translateY(-5px);  /* Efeito de "elevação" ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao passar o mouse */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: 1px solid #e0e0e0;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Grid layout para os cards */
+#patient-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cards responsivos */
+    gap: 1.5rem;  /* Ajuste o espaçamento entre os cards */
+    padding: 1rem;
+    justify-items: center; /* Centraliza os cards dentro da grid */
+}
+
+/* Estilo adicional para melhorar a apresentação do botão "Logout" */
+.btn-outline-success {
+    --bs-btn-color: #3e3e3e;
+    --bs-btn-border-color: #3e3e3e;
+    background-color: #f8f9fa;
+    border-radius: 25px;
+    padding: 8px 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-outline-success:hover {
+    background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
+    color: #000;
+}
+

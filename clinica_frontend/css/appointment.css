@@ -1,0 +1,51 @@
+.form-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.header-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+.form-label {
+    font-weight: 500;
+}
+.evolution-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+.evolution-table th, .evolution-table td {
+    border: 1px solid #000;
+    padding: 8px;
+}
+.evolution-header {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-weight: 500;
+}
+/* Adicionando bordas pretas para inputs e botões */
+.form-control, .btn {
+    border: 1px solid #000 !important;
+}
+.form-control:focus {
+    border-color: #000 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25) !important;
+}
+/* Removendo box-shadow dos inputs */
+.form-control {
+    box-shadow: none !important;
+}
+/* Ajustando aparência dos radio buttons e checkboxes */
+.form-check-input {
+    border: 1px solid #000 !important;
+}
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #000;
+}

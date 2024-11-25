@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Serviço Escola de Psicologia - UNICURITIBA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/appointment.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/images/a-removebg-preview.png" height="37" width="50" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto"></ul>
+                <form class="d-flex">
+                    <button type="button" class="btn btn-light me-2">Perfil</button>
+                    <button type="button" onclick="logout()" class="btn btn-outline-light">Logout</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulário -->
+    <div class="form-container">
+        <h2 class="header-title">SERVIÇO ESCOLA DE PSICOLOGIA - UNICURITIBA</h2>
+
+        <form>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Número do prontuário:</label>
+                    <input type="text" class="form-control" disabled
+                        placeholder="(campo será preenchido pela Clínica-escola)">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Data de abertura/início dos atendimentos:</label>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Nome completo:</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Data de nascimento:</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Gênero:</label>
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genero" value="M">
+                            <label class="form-check-label">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genero" value="F">
+                            <label class="form-check-label">F</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="genero" value="Outro">
+                            <label class="form-check-label">Outro</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Endereço:</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Telefone(s):</label>
+                    <input type="tel" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">E-mail:</label>
+                    <input type="email" class="form-control">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Nome e telefone de contatos em caso de emergência:</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Escolaridade:</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Ocupação:</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Necessidade Especial:</label>
+                <div class="mt-2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Cognitiva">
+                        <label class="form-check-label">Cognitiva</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Locomoção">
+                        <label class="form-check-label">Locomoção</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Visão">
+                        <label class="form-check-label">Visão</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Audição">
+                        <label class="form-check-label">Audição</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="Outras">
+                        <label class="form-check-label">Outras</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Estagiário(a):</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Orientador(a):</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <h4 class="mt-4 mb-3">PRONTUÁRIO</h4>
+            <table class="evolution-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Data e Hora</th>
+                        <th>Avaliação de demanda e definição dos objetivos do trabalho • Registro da evolução dos
+                            atendimentos e principais observações clínicas • Registro dos procedimentos adotados •
+                            Registro de encaminhamento ou encerramento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="datetime-local" class="form-control"></td>
+                        <td><textarea class="form-control" rows="4"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-primary" onclick="saveAsPdf(event)">Salvar</button>
+
+                <button type="button" class="btn btn-secondary" onclick="window.history.back()">Voltar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2024 Clínica Online. Todos os direitos reservados.</p>
+        <p class="mb-0">Desenvolvido com dedicação pela sua equipe.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/documents.js"></script>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';
+        }
+
+        function saveAsPdf(event) {
+            event.preventDefault(); // Evita o comportamento padrão do formulário (evita o refresh da página)
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Adicionando conteúdo ao PDF (adapte conforme necessário)
+            doc.text("Conteúdo do prontuário", 10, 10);
+
+            // Converter o PDF para Base64
+            const pdfBase64 = doc.output("datauristring").split(",")[1]; // Remove "data:application/pdf;base64,"
+
+            // Dados do documento a ser enviado
+            const documentDto = {
+                fileName: "prontuario.pdf",
+                contentType: "application/pdf",
+                fileContent: pdfBase64
+            };
+
+            // Verificar se o campo "nome" existe antes de acessar seu valor
+            const patientNameInput = document.querySelector('input[name="nome"]');
+            const patientName = patientNameInput ? patientNameInput.value : "Paciente";  // Se não encontrar, usa "Paciente"
+
+            // Enviar os dados para o backend
+            fetch(`http://localhost:8080/patients/documents?patientName=${encodeURIComponent(patientName)}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(documentDto)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Documento salvo com sucesso!");
+                    } else {
+                        return response.text().then(error => { throw new Error(error); });
+                    }
+                })
+                .catch(error => {
+                    console.error("Erro ao salvar o documento:", error.message);
+                    alert("Erro ao salvar o documento: " + error.message);
+                });
+        }
+
+
+    </script>
+</body>
+
+</html>
